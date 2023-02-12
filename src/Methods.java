@@ -26,30 +26,79 @@ public class Methods {
 //
 //}
 
-public static void main(String[] args){
+    //--------CALLING METHODS ---------------
 
-    String x = "David";  //from the print method
-    print("Hello " + x);   //from the print method
+//public static void main(String[] args){
+//
+//    String x = "David";  //from the print method
+//    print("Hello " + x);   //from the print method
+//
+//    add(5, 6); //arguments inside the () ==== from the add method
+//
+//    greet("Nelia", 25);  //from the greet method
+//}
 
-    add(5, 6); //arguments inside the () ==== from the add method
+//    static void add(int num1, int num2){
+//
+//        System.out.println(num1 + num2);
+//        // == add(1, 2);  Calling a method within the same method creates a recursion -- stackoverflow
+//        print("Good day"); // calling from the print method
+//    }
+//    static void print(String word) {
+//        System.out.println(word);
+//        greet("Anne", 16); //can call another method here
+//    }
+//
+//    static void greet(String name, int age){
+//
+//        System.out.println("Hello " + name);
+//        System.out.println("You are " + age);
+//    }
 
-    greet("Nelia", 25);  //from the greet method
-}
+    //==========RETURN TYPES =============
+     /// ---- return types can be void, String, int, etc
 
-    static void add(int num1, int num2){
+    public static void main(String[] args){
 
-        System.out.println(num1 + num2);
-        // == add(1, 2);  Calling a method within the same method creates a recursion -- stackoverflow
-        print("Good day"); // calling from the print method
+      int sum = add(5, 2);  /// calling the add method and assign it to a variable
+        System.out.println(sum);
+
+        int diff = subtract(20, 15);   ///calling the subtract method
+        System.out.println(diff);
+
+        System.out.println(isLegalAge(25));  //calling the isLegalAge method with an argument
+
+        int sum2 = add(3, 7, 8);  //calling the add method with 3 params
+        System.out.println(sum2);
+
+        double sumOfDec = add(3.5, 5.3);  //calling the add method with double return type
+        System.out.println(sumOfDec);
     }
-    static void print(String word) {
-        System.out.println(word);
-        greet("Anne", 16); //can call another method here
+
+    //==========INT and Boolean RETURN TYPES=====
+
+    static int add( int num1, int num2){
+        return num1 + num2;
     }
 
-    static void greet(String name, int age){
-
-        System.out.println("Hello " + name);
-        System.out.println("You are " + age);
+    static int subtract( int num1, int num2){
+        return num1 - num2;
     }
+
+    static boolean isLegalAge(int age){
+        if(age >= 18) return true;
+        else return false;
+    }
+
+    //// ------ OVERLOADING -- SAME METHOD BUT WITH DIFFERENT PARAMETERS-----
+    static int add( int num1, int num2, int num3){
+        return num1 + num2 + num3;
+    }
+
+    // ----same METHOD Name but different return type ------
+
+    static double add(double dec1, double dec2){
+        return dec1 + dec2;
+    }
+
 }
