@@ -1,4 +1,4 @@
-import java.sql.SQLOutput;
+
 
 public class Methods {
 
@@ -58,47 +58,74 @@ public class Methods {
     //==========RETURN TYPES =============
      /// ---- return types can be void, String, int, etc
 
+//    public static void main(String[] args){
+//
+//      int sum = add(5, 2);  /// calling the add method and assign it to a variable
+//        System.out.println(sum);
+//
+//        int diff = subtract(20, 15);   ///calling the subtract method
+//        System.out.println(diff);
+//
+//        System.out.println(isLegalAge(25));  //calling the isLegalAge method with an argument
+//
+//        int sum2 = add(3, 7, 8);  //calling the add method with 3 params
+//        System.out.println(sum2);
+//
+//        double sumOfDec = add(3.5, 5.3);  //calling the add method with double return type
+//        System.out.println(sumOfDec);
+//    }
+//
+//    //==========INT and Boolean RETURN TYPES=====
+//
+//    static int add( int num1, int num2){
+//        return num1 + num2;
+//    }
+//
+//    static int subtract( int num1, int num2){
+//        return num1 - num2;
+//    }
+//
+//    static boolean isLegalAge(int age){
+//        if(age >= 18) return true;
+//        else return false;
+//    }
+//
+//    //// ------ OVERLOADING -- SAME METHOD BUT WITH DIFFERENT PARAMETERS-----
+//    static int add( int num1, int num2, int num3){
+//        return num1 + num2 + num3;
+//    }
+//
+//    // ----same METHOD Name but different return type ------
+//
+//    static double add(double dec1, double dec2){
+//        return dec1 + dec2;
+//    }
+
+    //  -------------EXERCISE ------  SUMMATION OF NUMBERS
+    /* Create a program  that has a method named "summation" - it needs to accept an array of
+    integers then return the sum of the given array. (Display the sum outside the method.)
+     */
+
     public static void main(String[] args){
 
-      int sum = add(5, 2);  /// calling the add method and assign it to a variable
-        System.out.println(sum);
 
-        int diff = subtract(20, 15);   ///calling the subtract method
-        System.out.println(diff);
+            int numbers[] = {1, 2, 3, 4, 5};
 
-        System.out.println(isLegalAge(25));  //calling the isLegalAge method with an argument
+            int result = summation(numbers);  //calling the summation method using the params
+        System.out.println(result);
 
-        int sum2 = add(3, 7, 8);  //calling the add method with 3 params
-        System.out.println(sum2);
-
-        double sumOfDec = add(3.5, 5.3);  //calling the add method with double return type
-        System.out.println(sumOfDec);
     }
 
-    //==========INT and Boolean RETURN TYPES=====
+    static int summation(int numbers[]){
+        int sum = 0;   //initialize the sum to 0
 
-    static int add( int num1, int num2){
-        return num1 + num2;
+        for(int number: numbers ) {
+            sum = sum + number;
+        }
+
+        return sum;
+
     }
 
-    static int subtract( int num1, int num2){
-        return num1 - num2;
-    }
-
-    static boolean isLegalAge(int age){
-        if(age >= 18) return true;
-        else return false;
-    }
-
-    //// ------ OVERLOADING -- SAME METHOD BUT WITH DIFFERENT PARAMETERS-----
-    static int add( int num1, int num2, int num3){
-        return num1 + num2 + num3;
-    }
-
-    // ----same METHOD Name but different return type ------
-
-    static double add(double dec1, double dec2){
-        return dec1 + dec2;
-    }
 
 }
