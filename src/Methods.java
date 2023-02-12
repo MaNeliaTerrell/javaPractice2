@@ -39,9 +39,12 @@ public static void main(String[] args){
     static void add(int num1, int num2){
 
         System.out.println(num1 + num2);
+        // == add(1, 2);  Calling a method within the same method creates a recursion -- stackoverflow
+        print("Good day"); // calling from the print method
     }
     static void print(String word) {
         System.out.println(word);
+        greet("Anne", 16); //can call another method here
     }
 
     static void greet(String name, int age){
